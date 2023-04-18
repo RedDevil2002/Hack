@@ -4500,7 +4500,6 @@ public extension Hack {
         case _50Square = "50.square"
         case _50SquareFill = "50.square.fill"
         case _AppleLogo = "apple.logo"
-        case _ = ""
     }
     
 }
