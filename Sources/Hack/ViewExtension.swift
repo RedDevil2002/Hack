@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(macOS 10.15, *)
-extension View {
+public extension View {
     // Have views side by side
     static func + <T> (lhs: Self, rhs: T) -> some View where T: View {
         HStack {
@@ -43,7 +43,7 @@ public extension CGFloat {
 
 // animates test values
 @available(macOS 10.15, *)
-extension Text {
+public extension Text {
     func transition(_ t: AnyTransition, value: String) -> some View {
         return self.transition(t).id("_t\(value)")
     }
