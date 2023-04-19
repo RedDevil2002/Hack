@@ -5,10 +5,38 @@
 //  Created by Brian Seo on 2023-04-18.
 //
 
-import Foundation
+import SwiftUI
+import UIKit
+
+
+public extension UIImage {
+    ///  Initializes UIImage straight from Hack.Symbol
+    convenience init?(symbol: Hack.Symbol) {
+        self.init(systemName: String(describing: symbol))
+    }
+}
+
+public extension Image {
+    ///  Initializes Image straight from Hack.Symbol
+    init(symbol: Hack.Symbol) {
+        self.init(systemName: String(describing: symbol))
+    }
+}
+
 
 public extension Hack {
-    enum Symbol: String {
+    /// Symbo Enum supports Type-Safe Method to load system name
+    /// - Example:
+    ///  let symbol: Hack.Symbol = Hack.Symbol._SquareAndArrowUp
+    ///  // SwiftUI
+    ///     let image = Image(symbol:  symbol)
+    ///  // UIKIt
+    ///     let image = Image(symbol: symbol)
+    enum Symbol: String, CaseIterable, CustomStringConvertible {
+        public var description: String {
+            self.rawValue
+        }
+        
         case _SquareAndArrowUp = "square.and.arrow.up"
         case _SquareAndArrowUpFill = "square.and.arrow.up.fill"
         case _SquareAndArrowUpCircle = "square.and.arrow.up.circle"
