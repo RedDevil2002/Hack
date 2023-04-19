@@ -1,6 +1,6 @@
 # Hack
 
-## IDEA (FEATURE 1)
+## FEATURE 1. TYPE SAFE SF SYMBOL
 Have you ever had to open SF Symbol app just to make sure there is no type? 
 Look no further, with Hack API, you can type-safely load SF Symbols.
 

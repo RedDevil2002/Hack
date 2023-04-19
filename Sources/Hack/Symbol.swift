@@ -11,6 +11,8 @@ import UIKit
 
 public extension UIImage {
     ///  Initializes UIImage straight from Hack.Symbol
+    ///  // UIKIt
+    ///     let image = Image(symbol: symbol)
     convenience init?(symbol: Hack.Symbol) {
         self.init(systemName: String(describing: symbol))
     }
@@ -18,6 +20,8 @@ public extension UIImage {
 
 public extension Image {
     ///  Initializes Image straight from Hack.Symbol
+    ///  // SwiftUI
+    ///     let image = Image(symbol:  symbol)
     init(symbol: Hack.Symbol) {
         self.init(systemName: String(describing: symbol))
     }
@@ -26,12 +30,13 @@ public extension Image {
 
 public extension Hack {
     /// Symbo Enum supports Type-Safe Method to load system name
-    /// - Example:
+    ///  CAUTION: Make sure to type "_" a.k.a underscore to get the most out of xcode autocomplete feature
+    ///  as all of its enum cases starts with _
+    ///
+    ///- Example:
     ///  let symbol: Hack.Symbol = Hack.Symbol._SquareAndArrowUp
-    ///  // SwiftUI
-    ///     let image = Image(symbol:  symbol)
-    ///  // UIKIt
-    ///     let image = Image(symbol: symbol)
+    
+    
     enum Symbol: String, CaseIterable, CustomStringConvertible {
         public var description: String {
             self.rawValue
